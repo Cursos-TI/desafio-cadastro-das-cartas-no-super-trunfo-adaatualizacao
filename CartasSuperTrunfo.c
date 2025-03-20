@@ -44,61 +44,52 @@ int main() {
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
     // Iniciando com a declaração de variáveis.
-    /*Variáveis da Carta 1 */
-    char estado;
-    char codCarta;
-    char cidade[50];
-    int populacao;
-    float area;
-    float pib;
-    int pontosTuristicos;
-
-    /*Variáveis da Carta 2 */
-    char estado2;
-    char codCarta2;
-    char cidade2[50];
-    int populacao2;
-    float area2;
-    float pib2;
-    int pontosTuristicos2;
+    /*Variáveis da Carta 1 e 2*/
+    char estado1, estado2;
+    char codCarta1, codCarta2;
+    char cidade1[50], cidade2[50];
+    int populacao1, populacao2;
+    float area1, area2;
+    float pib1, pib2;
+    int pontosTuristicos1, pontosTuristicos2;
 
 
     //Criando as mensagens e capturando os dados inseridos pelo usuário
     printf("Olá Viajante! Venha se aventurar no jogo Super Trunfo. Vamos começar realizando o cadastro das cartas. \n \n \n \n ");
 
     //pegando Letra do estado
-    printf("Digite o código do Estado: \n" );
-    scanf("%c", &estado);
+    printf("Digite o código do Estado (A-H): \n" );
+    scanf("%c", &estado1);
 
     //pegando codigo da carta
     printf("Digite o código da carta: \n");
-    scanf(" %c", &codCarta);
+    scanf(" %c", &codCarta1);
 
     // Limpa o buffer do stdin antes de fgets()
     while (getchar() != '\n');
 
     //pegando o nome da cidade
     printf("Favor digite o nome da cidade: \n");
-    fgets(cidade, 50, stdin);
+    fgets(cidade1, 50, stdin);
 
     // Remover a quebra de linha
-    cidade[strcspn(cidade, "\n")] = '\0';
+    cidade1[strcspn(cidade1, "\n")] = '\0';
 
     //pegando população
     printf("Digite o valor da população: \n");
-    scanf("%d", &populacao);
+    scanf("%d", &populacao1);
 
     //pegando área em km2
     printf("Digite o Km2 da Area: \n");
-    scanf("%f", &area);
+    scanf("%f", &area1);
 
     // Pegando o valor do PIB da cidade
-    printf("Favor digite o PIB desta cidade: \n");
-    scanf("%f", &pib);
+    printf("Favor digite o PIB desta cidade (em bilhões): \n");
+    scanf("%f", &pib1);
 
     //Pegando quantidade de pontos turísticos
     printf("Digite a quantidade de pontos turísticos desta cidade: \n");
-    scanf("%d", &pontosTuristicos);
+    scanf("%d", &pontosTuristicos1);
 
     printf("Agora que realizou o cadastro da primeira carta. Vamos realizar o cadastro da segunda carta.\n \n \n \n");
 
@@ -106,7 +97,7 @@ int main() {
     while (getchar() != '\n');
 
     //pegando Letra do estado
-    printf("Digite o código do Estado: \n" );
+    printf("Digite o código do Estado (A-H): \n" );
     scanf("%c", &estado2);
     
     //pegando codigo da carta
@@ -132,7 +123,7 @@ int main() {
     scanf("%f", &area2);
     
     // Pegando o valor do PIB da cidade
-    printf("Favor digite o PIB desta cidade: \n");
+    printf("Favor digite o PIB desta cidade(em bilhões): \n");
     scanf("%f", &pib2);
 
     //Pegando quantidade de pontos turísticos
@@ -145,13 +136,13 @@ int main() {
     printf("╔══════════════════════════════════╗\n");
     printf("║CARTA-1    🃏 SUPER TRUNFO        ║\n");
     printf("╠══════════════════════════════════╣\n");
-    printf("║ Estado: %c                       \n", estado);
-    printf("║ Código: %c0%c                    \n", estado, codCarta);
-    printf("║ Cidade: %s                       \n", cidade);
-    printf("║ População: %d                    \n", populacao);
-    printf("║ Área: %.2f km²                   \n", area);
-    printf("║ PIB: %.2f bilhões                \n", pib);
-    printf("║ Pontos Turísticos: %d            \n", pontosTuristicos);
+    printf("║ Estado: %c                       \n", estado1);
+    printf("║ Código: %c0%c                    \n", estado1, codCarta1);
+    printf("║ Cidade: %s                       \n", cidade1);
+    printf("║ População: %d                    \n", populacao1);
+    printf("║ Área: %.2f km²                   \n", area1);
+    printf("║ PIB: %.2f bilhões                \n", pib1);
+    printf("║ Pontos Turísticos: %d            \n", pontosTuristicos1);
     printf("╚══════════════════════════════════╝\n");
     printf("\n");
 	
