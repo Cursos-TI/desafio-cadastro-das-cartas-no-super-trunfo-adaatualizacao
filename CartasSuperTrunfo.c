@@ -156,7 +156,7 @@ int main() {
     printf("║ PIB: %.2f bilhões                      \n", pib1);
     printf("║ Pontos Turísticos: %d                  \n", pontosTuristicos1);
     printf("║ Densidade Populacional: %.2f hab/Km²   \n", densidadePopulacional1);
-    printf("║ Pib Per Capita: %.2f                   \n", pontosTuristicos1);
+    printf("║ Pib Per Capita: %.2f  reais            \n", pibPerCapita1);
     printf("╚══════════════════════════════════════════╝\n");
     printf("\n");
 	
@@ -166,15 +166,15 @@ int main() {
     printf("╔══════════════════════════════════════════╗\n");
     printf("║CARTA-2    🃏 SUPER TRUNFO                ║\n");
     printf("╠══════════════════════════════════════════╣\n");
-    printf("║ Estado: %c                       \n", estado2);
-    printf("║ Código: %c0%c                    \n", estado2, codCarta2);
-    printf("║ Cidade: %s                       \n", cidade2);
-    printf("║ População: %d                    \n", populacao2);
-    printf("║ Área: %.2f km²                   \n", area2);
-    printf("║ PIB: %.2f bilhões                \n", pib2);
-    printf("║ Pontos Turísticos: %d            \n", pontosTuristicos2);
+    printf("║ Estado: %c                             \n", estado2);
+    printf("║ Código: %c0%c                          \n", estado2, codCarta2);
+    printf("║ Cidade: %s                             \n", cidade2);
+    printf("║ População: %d                          \n", populacao2);
+    printf("║ Área: %.2f km²                         \n", area2);
+    printf("║ PIB: %.2f bilhões                      \n", pib2);
+    printf("║ Pontos Turísticos: %d                  \n", pontosTuristicos2);
     printf("║ Densidade Populacional: %.2f hab/Km²   \n", densidadePopulacional2);
-    printf("║ Pib Per Capita: %.2f                   \n", pontosTuristicos2);
+    printf("║ Pib Per Capita: %.2f reais             \n", pibPerCapita2);
     printf("╚══════════════════════════════════════════╝\n");
     printf("\n");
 
