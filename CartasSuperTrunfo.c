@@ -48,12 +48,13 @@ int main() {
     char estado1, estado2;
     char codCarta1, codCarta2;
     char cidade1[50], cidade2[50];
-    int populacao1, populacao2;
+    unsigned int populacao1, populacao2;
     float area1, area2;
     float pib1, pib2;
     int pontosTuristicos1, pontosTuristicos2;
     float densidadePopulacional1, densidadePopulacional2;
     float pibPerCapita1, pibPerCapita2;
+    float superPoder1, superPoder2;
 
 
     //Criando as mensagens e capturando os dados inseridos pelo usuário
@@ -79,7 +80,7 @@ int main() {
 
     //pegando população
     printf("Digite o valor da população: \n");
-    scanf("%d", &populacao1);
+    scanf("%u", &populacao1);
 
     //pegando área em km2
     printf("Digite o Km2 da Area: \n");
@@ -118,7 +119,7 @@ int main() {
 
     //pegando população
     printf("Digite o valor da população: \n");
-    scanf("%d", &populacao2);
+    scanf("%u", &populacao2);
 
     //pegando área em km2
     printf("Digite o Km2 da Area: \n");
@@ -141,6 +142,10 @@ int main() {
     // Realizando o Cálculo do PIB per Capita[Pib1/populacao1]
     pibPerCapita1 = (pib1 / populacao1);
     pibPerCapita2 = (pib2 / populacao2);
+
+    // Calculando o Super Pode de cada carta
+    superPoder1 = (populacao1 + area1 + pib1 + pontosTuristicos1 + pibPerCapita1 + (area1 / populacao1));
+    superPoder2 = (populacao2 + area2 + pib2 + pontosTuristicos2 + pibPerCapita2 + (area2 / populacao2));
     
 
     // Exibindo os dados formatados corretamente
@@ -151,7 +156,7 @@ int main() {
     printf("║ Estado: %c                             \n", estado1);
     printf("║ Código: %c0%c                          \n", estado1, codCarta1);
     printf("║ Cidade: %s                             \n", cidade1);
-    printf("║ População: %d                          \n", populacao1);
+    printf("║ População: %u                          \n", populacao1);
     printf("║ Área: %.2f km²                         \n", area1);
     printf("║ PIB: %.2f bilhões                      \n", pib1);
     printf("║ Pontos Turísticos: %d                  \n", pontosTuristicos1);
@@ -169,7 +174,7 @@ int main() {
     printf("║ Estado: %c                             \n", estado2);
     printf("║ Código: %c0%c                          \n", estado2, codCarta2);
     printf("║ Cidade: %s                             \n", cidade2);
-    printf("║ População: %d                          \n", populacao2);
+    printf("║ População: %u                          \n", populacao2);
     printf("║ Área: %.2f km²                         \n", area2);
     printf("║ PIB: %.2f bilhões                      \n", pib2);
     printf("║ Pontos Turísticos: %d                  \n", pontosTuristicos2);
@@ -179,7 +184,16 @@ int main() {
     printf("\n");
 
 
+    // Comparações dos atributos
+    printf("\n════════════════ COMPARAÇÕES ENTRE AS CARTAS ════════════════\n");
 
+    printf("População: Carta %d venceu (%d)\n", 2 - (populacao1 > populacao2), populacao1 > populacao2);
+    printf("Área: Carta %d venceu (%d)\n", 2 - (area1 > area2), area1 > area2);
+    printf("PIB: Carta %d venceu (%d)\n", 2 - (pib1 > pib2), pib1 > pib2);
+    printf("Pontos Turísticos: Carta %d venceu (%d)\n", 2 - (pontosTuristicos1 > pontosTuristicos2), pontosTuristicos1 > pontosTuristicos2);
+    printf("Densidade Populacional: Carta %d venceu (%d)\n", 2 - (densidadePopulacional1 < densidadePopulacional2), densidadePopulacional1 < densidadePopulacional2);
+    printf("PIB per Capita: Carta %d venceu (%d)\n", 2 - (pibPerCapita1 > pibPerCapita2), pibPerCapita1 > pibPerCapita2);
+    printf("Super Poder: Carta %d venceu (%d)\n", 2 - (superPoder1 > superPoder2), superPoder1 > superPoder2);
 
     return 0;
 }
